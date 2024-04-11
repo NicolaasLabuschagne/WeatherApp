@@ -78,9 +78,13 @@
             document.querySelector(".search input").value = "";
             document.querySelector(".search button").addEventListener("click", () => {
                 checkWeather(searchBox.value);
-            })
+            });
+            document.querySelector(".search input").addEventListener("keydown", (event) =>{
+                if(event.code === 'Enter'){
+                checkWeather(searchBox.value);
+            };
         })
-        
+    });
     </script>
 </body>
 </html>
